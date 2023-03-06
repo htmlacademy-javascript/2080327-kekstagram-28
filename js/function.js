@@ -1,13 +1,11 @@
-let compareLength = function(parametrString,maxLength) {
-  
+function comparesLength (parametrString,maxLength) {
   if (parametrString.length <= maxLength) {
-    return true
-  }
-  else {
-    return false
+    return true;
+  } else {
+    return false;
   }
 }
-console.log(compareLength('проверяемая строка', 10));
+comparesLength('проверяемая строка', 20);
 
 function palindromeChecker(str) {
   str = str.toLowerCase().replace(/[^а-яa-z1-9]/gi, '');
@@ -19,27 +17,23 @@ function palindromeChecker(str) {
   }
   return true;
 }
-
-console.log(palindromeChecker('Лёша на клопа нашёл '));
+palindromeChecker('bkbkjbkjbk');
 
 function numberChecker(enterString) {
-  let str = '' + enterString
-  let res = str.replace(/\D/g, '');
+  const str = `${ enterString}`;
+  const res = str.replace(/\D/g, '');
   return res;
-};
-
-console.log(numberChecker(-1));
+}
+numberChecker('34');
 
 function fileName(enterString,minLength,addSymbol) {
   while (minLength > enterString.length) {
     if(minLength - enterString.length < addSymbol.length) {
-      addSymbol = addSymbol.substring(0, minLength - enterString.length)
+      addSymbol = addSymbol.substring(0, minLength - enterString.length);
 
     }
-    enterString = '' + addSymbol + enterString
+    enterString = `${ addSymbol }${enterString}`;
   }
-  return enterString
+  return enterString;
 }
-
-console.log(fileName('qwerty', 4, '0'))
-
+fileName('dgdhfhf');

@@ -1,4 +1,4 @@
-const comparesLength = (parametrString,maxLength) => parametrString.length <= maxLength
+const comparesLength = (parametrString,maxLength) => parametrString.length <= maxLength;
 comparesLength('проверяемая строка', 20);
 
 const palindromeChecker = (str) => {
@@ -10,14 +10,14 @@ const palindromeChecker = (str) => {
     }
   }
   return true;
-}
+};
 palindromeChecker('bkbkjbkjbk');
 
 const exportNumber = (enterString) => {
   const str = `${ enterString }`;
   const res = str.replace(/\D/g, '');
   return res;
-}
+};
 exportNumber('34');
 
 const padStart = (enterString, minLength, addSymbol) => {
@@ -28,5 +28,5 @@ const padStart = (enterString, minLength, addSymbol) => {
     enterString = `${ addSymbol }${ enterString }`;
   }
   return enterString;
-}
+};
 padStart('dgdhfhf');

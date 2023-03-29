@@ -30,26 +30,26 @@ const getDescription = () => {
   result = Math.random() * (upper - lower + 1) + lower;
   const keySecond = Math.floor(result);
 
-  return  descriptionsFirst[keyFirst] + descriptionsSecond[keySecond]
+  return descriptionsFirst[keyFirst] + descriptionsSecond[keySecond];
 };
 function generateRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+}
 const textComment = [
-    'Всё отлично!',
-    'В целом всё неплохо. Но не всё.',
-    'Когда вы делаете фотографию, хорошо бы убирать палец из кадра. В конце концов это просто непрофессионально.',
-    'Моя бабушка случайно чихнула с фотоаппаратом в руках и у неё получилась фотография лучше.',
-    'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
-    'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'
+  'Всё отлично!',
+  'В целом всё неплохо. Но не всё.',
+  'Когда вы делаете фотографию, хорошо бы убирать палец из кадра. В конце концов это просто непрофессионально.',
+  'Моя бабушка случайно чихнула с фотоаппаратом в руках и у неё получилась фотография лучше.',
+  'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
+  'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'
 ];
 const getTextComment = () => {
-  let lower = Math.ceil(Math.min(0, textComment.length - 1));
-  let upper = Math.floor(Math.max(0, textComment.length - 1));
-  let result = Math.random() * (upper - lower + 1) + lower;
+  const lower = Math.ceil(Math.min(0, textComment.length - 1));
+  const upper = Math.floor(Math.max(0, textComment.length - 1));
+  const result = Math.random() * (upper - lower + 1) + lower;
   const keyFirst = Math.floor(result);
 
-  return  textComment[keyFirst]
+  return textComment[keyFirst];
 };
 const firstName = [
   'Вася',
@@ -60,23 +60,23 @@ const firstName = [
   'Паша'
 ];
 const getName = () => {
-  let lower = Math.ceil(Math.min(0, firstName.length - 1));
-  let upper = Math.floor(Math.max(0, firstName.length - 1));
-  let result = Math.random() * (upper - lower + 1) + lower;
+  const lower = Math.ceil(Math.min(0, firstName.length - 1));
+  const upper = Math.floor(Math.max(0, firstName.length - 1));
+  const result = Math.random() * (upper - lower + 1) + lower;
   const keyFirst = Math.floor(result);
 
-  return  firstName[keyFirst]
+  return firstName[keyFirst];
 };
 
-let getData = function() {
+const getData = function() {
 
-  let data = [];
-  let comments = [];
+  const data = [];
+  const comments = [];
 
   for (let j = 0; j < 2; j++) {
     comments.push({
       id: j + 1,
-      avatar: 'img/avatar-' + generateRandomInteger(1,6) +'.svg',
+      avatar: 'img/avatar-' + generateRandomInteger(1,6) + '.svg',
       message: getTextComment(),
       name: getName()
     });

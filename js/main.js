@@ -80,4 +80,4 @@ const getData = () => {
   }
   return data;
 };
-console.log(getData());
+getData();
